@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
 
         // For compatibility
 
-        if (Build.VERSION.SDK_INT,23){
+        if (Build.VERSION.SDK_INT < 23){
 
             locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, locationListener);
 
