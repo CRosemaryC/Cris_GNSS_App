@@ -7,12 +7,103 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/textView"
+        android:layout_width="162dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="48dp"
+        android:text="@string/text_title"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/spinner_contellation"
+        android:layout_width="247dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="8dp"
+        android:entries="@array/constellation_types"
+        android:spinnerMode="dropdown"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.471"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Spinner
+        android:id="@+id/spinner_frequency"
+        android:layout_width="186dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="8dp"
+        android:entries="@array/frequency_types"
+        android:spinnerMode="dropdown"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_contellation" />
+
+    <Spinner
+        android:id="@+id/spinner_corrections"
+        android:layout_width="216dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="8dp"
+        android:entries="@array/correction_types"
+        android:spinnerMode="dropdown"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.518"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_frequency" />
+
+    <Button
+        android:id="@+id/button_position"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:layout_marginTop="108dp"
+        android:text="@string/button_position"
+        android:onClick="onClickMap"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_corrections" />
+
+    <Button
+        android:id="@+id/button_logApply"
+        android:layout_width="60dp"
+        android:layout_height="46dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginBottom="116dp"
+        android:text="@string/button_logApply"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/button_plots"
+        android:layout_width="76dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginBottom="116dp"
+        android:text="@string/button_plots"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Spinner
+        android:id="@+id/spinner_log"
+        android:layout_width="137dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="128dp"
+        android:entries="@array/log_types"
+        android:spinnerMode="dropdown"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button_logApply"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/button_plots" />
 
 </android.support.constraint.ConstraintLayout>

@@ -17,6 +17,10 @@ public class MainActivity extends AppCompatActivity {
 
     private LocationManager locationManager;
     private LocationListener locationListener;
+    private static final String TAG= "MyCoordinates";
+    Double lat;
+    Double lon;
+    Double alt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,8 +32,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onLocationChanged(Location location) {
 
-                Log.d("Location:", location.toString());
+                lat = location.getLatitude();
+                lon = location.getLongitude();
+                alt = location.getAltitude();
 
+                Log.d("Location:", location.toString());
+                Log.d(TAG, "Lat: " + String.valueOf(lat) + " Lon: " + String.valueOf(lon) + " Alt: " + String.valueOf(alt));
 
             }
 

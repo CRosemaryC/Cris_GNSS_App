@@ -1,3 +1,38 @@
 <resources>
     <string name="app_name">Cris_GNSS_App</string>
+    <string name="text_title">GNSStars_app</string>
+    <string name="spinner_constellation">Google</string>
+    <string name="spinner_frequency">Frequency</string>
+    <string name="spinner_corrections">Corrections</string>
+    <string name="button_position">Position</string>
+    <string name="button_plots">Plots</string>
+    <string name="spinner_log">Log</string>
+    <string name="button_logApply">Apply</string>
+
+    <string-array name="constellation_types">
+        <item>Default</item>
+        <item>GPS</item>
+        <item>Galileo</item>
+        <item>GPS+Galileo</item>
+    </string-array>
+
+    <string-array name="frequency_types">
+        <item>Single</item>
+        <item>Dual</item>
+    </string-array>
+
+    <string-array name="correction_types">
+        <item>Tropospheric</item>
+        <item>Klobuchar</item>
+        <item>Relativistic Path</item>
+    </string-array>
+
+    <string-array name="log_types">
+        <item>Start Log</item>
+        <item>Stop Log</item>
+        <item>Save Log</item>
+        <item>Delete Log</item>
+    </string-array>
+
+    <string name="title_activity_maps">Map</string>
 </resources>
